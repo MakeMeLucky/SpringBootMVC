@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Genres Page</title></head>
+<body>
+<h1>Genres</h1>
+<p>Genre count is: <span th:text="${genres.count}"></span></p>
+<div>
+    <table border="1">
+        <tr>
+            <th>Genre</th>
+        </tr>
+        <tr th:each ="genre : ${genres.genreList}">
+            <td>
+                <a th:href="@{/store?genre={id}(id=${genre.name})}"> <span th:text="${genre.name}"></span></a>
+            </td>
+        </tr>
+    </table>
+</div>
+<p><a th:href="@{/home}">Home</a></p>
+</body>
+</html>

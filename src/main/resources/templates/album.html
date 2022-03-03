@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Album Page</title></head>
+<body>
+<h1>Album</h1>
+<p>Album name is: <span th:text="${album.name}"></span></p>
+<p>Album description is: <span th:text="${album.description}"></span></p>
+<a th:href="@{/home}">Home</a>
+</body>
+</html>

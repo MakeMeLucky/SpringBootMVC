@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head><title>Genre Page</title></head>
+<body>
+<h1><span th:text="${genre.name}"></span></h1>
+<div>
+    <table border="1">
+        <tr>
+            <th>Albums</th>
+        </tr>
+        <tr th:each ="album : ${genre.albums}">
+            <td>
+                <a th:href="@{/store/details/{id}(id=${album.name})}"> <span th:text="${album.name}"></span></a>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<p><a th:href="@{/store/genres}">Genres</a></p>
+<p><a th:href="@{/home}">Home</a></p>
+</body>
+</html>
